@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+</head>
+<style>
+    .navigation {
+        display: flex;
+        background-color: blanchedalmond;
+        font-size: 20px;
+        border-radius: 20px;
+        box-shadow: 8px 6px rgb(199, 224, 55);
+        opacity: 80%;
+        z-index: +2;
+        width: 100%;
+    
+        
+    }
+
+    li {
+        list-style: none;
+
+        padding: 20px 40px;
+      
+    }
+
+    li a {
+        color: rgb(68, 114, 116);
+    }
+
+    li a:hover {
+        color: rgb(10, 23, 24);
+        background-color: rgb(120, 202, 87);
+        border-radius: 6px;
+        box-shadow: 3px 3px black;
+
+    }
+
+    .navbar li a {
+        text-decoration: none;
+    }
+
+    body {
+        background-image: url(BACKGROUND.jpg);
+        background-size: 1500px 1300px;
+        background-repeat: no-repeat;
+
+
+    }
+
+    .container {
+        display: inline-block;
+        background-color: aquamarine;
+        position: relative;
+        top: 230px;
+        left: 150px;
+        width: 400px;
+        height: 150px;
+        padding: 5px 5px;
+
+        margin: 20px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        border: 8px rgb(94, 94, 199);
+        border-style: double;
+        box-shadow: 5px 5px rgb(32, 32, 119);
+    }
+
+    #btn {
+        color: seagreen;
+    }
+
+    #btn:hover {
+        color: rgb(225, 241, 163);
+        background-color: rgb(175, 228, 198);
+        box-shadow: 4px 2px rgb(116, 141, 223);
+        position: relative;
+
+    }
+
+    .container:hover {
+        box-shadow: 5px 5px 10px 5px rgb(32, 32, 119);
+    }
+
+    .order {
+        text-decoration: none;
+        font-style: italic;
+        color: rgb(20, 53, 90);
+        position: relative;
+        left: 140px;
+        padding: 10px 15px;
+
+    }
+
+    .order:hover {
+        color: rgb(14, 36, 61);
+        background-color: rgb(241, 241, 241);
+        border-radius: 15px;
+        box-shadow: 2px 2px rgb(100, 100, 100);
+    }
+
+    .reviews {
+        text-decoration: none;
+        font-style: italic;
+        color: rgb(20, 90, 47);
+        position: relative;
+        left: 140px;
+        padding: 10px 15px;
+
+    }
+
+    .reviews:hover {
+        color: rgb(13, 56, 29);
+        background-color: rgb(221, 221, 221);
+        border-radius: 15px;
+        box-shadow: 2px 2px rgb(77, 76, 76);
+    }
+
+
+
+    @keyframes prat {
+        0% {
+            top: 0px;
+            right: 0px;
+        }
+
+        30% {
+            top: 50px;
+            right: 0px;
+        }
+
+        60% {
+            top: 50px;
+            right: 1000px;
+        }
+
+        90% {
+            top: 0px;
+            right: 1000px;
+        }
+
+        100% {
+            top: 0px;
+            right: 0px;
+        }
+    }
+
+    input[type='text'].met {
+        box-shadow: 2px 2px rgb(223, 223, 36);
+        border-radius: 3px;
+        width: 150px;
+        height: 25px;
+        background-color: rgb(226, 196, 190);
+        font-style: italic;
+        color: rgb(31, 41, 41);
+        font-weight: bold;
+    }
+
+    input[type='email'].met {
+        box-shadow: 2px 2px rgb(231, 130, 46);
+        border-radius: 3px;
+        width: 150px;
+        height: 25px;
+        background-color: rgb(212, 223, 150);
+        font-style: italic;
+        color: rgb(97, 64, 94);
+        font-weight: bold;
+    }
+
+    input[type='date'] {
+        box-shadow: 2px 2px rgb(121, 169, 197);
+        border-radius: 3px;
+        width: 150px;
+        height: 25px;
+        background-color: rgb(150, 218, 143);
+        font-style: italic;
+        color: rgb(39, 36, 58);
+        font-weight: bold;
+    }
+    input[type='number'] {
+        box-shadow: 2px 2px rgb(150, 223, 147);
+        border-radius: 3px;
+        width: 150px;
+        height: 25px;
+        background-color: rgb(184, 185, 235);
+        font-style: italic;
+        color: rgb(192, 128, 187);
+        font-weight: bold;
+    }
+
+    input[type='text'].add {
+        box-shadow: 2px 2px rgb(136, 206, 129);
+        border-radius: 3px;
+        width: 200px;
+        height: 40px;
+        background-color: rgb(123, 204, 187);
+        font-style: italic;
+        color: rgb(14, 71, 6);
+        font-weight: bold;
+    }
+
+    #re:hover {
+        background-color: rgb(161, 141, 187);
+        color: rgb(122, 39, 104);
+    }
+
+
+    img.food:hover {
+
+height: 160px;
+width: 160px;
+font-size: 60px;
+transform: rotate(360deg);
+opacity: 70%;
+border-radius: 25px;
+/* box-shadow: 4px 4px 8px 4px rgb(168, 167, 167); */
+}
+
+
+    img.food {
+        width: 150px;
+        height: 150px;
+        padding: 20px 20px;
+        float: right;
+        transition-property: background-color;
+        transition: all 2s ease-in-out .3s;
+
+        border-radius: 25px;
+        position: relative;
+        animation: prat 8s ease-in 2s 10 backwards;
+    }
+
+    .a {
+        position: relative;
+        top: 30px;
+        left: 70px;
+    }
+
+    .f {
+        position: relative;
+        top: 100px;
+        right: 70px;
+    }
+
+    img.t {
+        width: 100px;
+        height: 80px;
+        padding: 1px 3px;
+        float: left;
+        border-radius: 2px;
+        position: relative;
+        top: 0px;
+        left: 5px;
+    }
+
+    img.t:hover {
+        transform: scale(2);
+        opacity: 100%;
+    }
+
+    img.g:hover {
+        transform: scale(2);
+        opacity: 100%;
+    }
+
+    img.g {
+        width: 100px;
+        height: 80px;
+        padding: 1px 3px;
+        float: right;
+        border-radius: 2px;
+        position: relative;
+        top: 70px;
+        right: 5px;
+    }
+
+    .r {
+        position: relative;
+        top: 40px;
+        padding: 4px 2px;
+    }
+    .o {
+        position: relative;
+        top: 40px;
+        padding: 4px 2px;
+    }
+    .form {
+        position: relative;
+        top: 300px;
+        left: 50px;
+        right: 50px;
+        display: block;
+     background-color: rgb(156, 188, 216);
+     border-radius: 10px;
+     border-style: double;
+     border-color: blanchedalmond;
+    box-shadow: 6px 6px 14px 8px rgb(34, 31, 31);
+     padding: 15px 15px;
+     margin: 10px 200px;
+    }
+    .heading{
+        position: relative;
+        left: 250px;
+        width: 300px;
+        color: rgb(193, 74, 209);
+       margin: 5px 5px;
+    }
+.heading:hover{
+    background-color: blanchedalmond;
+    color: rgb(208, 138, 214);
+    border-radius: 6px;
+
+}
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="list"><a href="advertisement.html">Home</a></li>
+                <li class="list"><a href="products.html">About Us</a></li>
+                <li class="list"><a href="contactus.html">Contact Us</a></li>
+               
+            </ul>
+
+
+        </nav>
+    </header>
+    <img src="IMAGE.jpg" class="food" alt="">
+
+    <span class="container">
+        <h2><a class="order" href=""> Walk In</a></h2>
+      <span class="o">  Address:<br>
+        Call ---------- for reserving seat
+    </span>
+    </span>
+    <span class="container">
+        <h2><a class="reviews" href=""> Reviews</a></h2>
+        <span class="r"> It is a really good restaurant - Mr.A<br></span>
+        Loved the ambience and food - Mrs.J
+    </span>
+  
+    <form action="backend.php" class="form"> <h2 class="heading">Fill This to Fill Your Tummy </h2>
+
+        <div>
+            <input type="text" class="met" placeholder="First Name">
+        </div>
+        <br>
+        <div>
+            <input type="text" class="met" placeholder="Last Name">
+        </div>
+        <br>
+        <div>
+            <input type="email" name="myemail" class="met" placeholder="Email">
+        </div><br>
+        <div>
+            Date Of Birth: <input type="date">
+        </div><br>
+        <div>
+            <input type="text" class="add" placeholder=" Address">
+        </div><br>
+        <div>
+        <input type="number" class="num" placeholder="Phone Number">
+    </div><br>
+        <div> Gender : Male <input type="radio">
+            Female <input type="radio">
+            Other <input type="radio">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now" id="re">
+        </div>
+        <br>
+    </form>
+
+</body>
+
+</html>

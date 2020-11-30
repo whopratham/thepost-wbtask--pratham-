@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+</head>
+<style>
+    .navigation {
+        display: flex;
+        background-color: blanchedalmond;
+        font-size: 20px;
+        border-radius: 20px;
+        box-shadow: 8px 6px rgb(199, 224, 55);
+        opacity: 80%;
+        z-index: +2;
+        width: 100%;
+        
+        
+    }
+
+    li {
+        list-style: none;
+         padding: 20px 40px;
+
+    }
+
+    li a {
+        color: rgb(68, 114, 116);
+    }
+
+    li a:hover {
+        color: rgb(10, 23, 24);
+        background-color: rgb(120, 202, 87);
+        border-radius: 10px;
+        box-shadow: 3px 3px black;
+        padding: 4px 4px;
+
+    }
+
+    .navbar li a {
+        text-decoration: none;
+    }
+
+    body {
+        background-image: url(BACKGROUND.jpg);
+        background-size: 1500px 1300px;
+        background-repeat: no-repeat;
+z-index: -1;
+
+    }
+
+
+    #btn {
+        color: seagreen;
+        border-radius: 5px;
+    }
+
+    #btn:hover {
+        color: rgb(31, 32, 27);
+        background-color: rgb(175, 228, 198);
+        box-shadow: 4px 2px rgb(116, 141, 223);
+        position: relative;
+
+    }
+
+    img:hover {
+
+        height: 160px;
+        width: 160px;
+        font-size: 60px;
+        transform: rotate(360deg);
+        opacity: 70%;
+        border-radius: 25px;
+        /* box-shadow: 4px 4px 8px 4px rgb(168, 167, 167); */
+    }
+
+    @keyframes prat {
+        0% {
+            top: 0px;
+            right: 0px;
+        }
+
+        30% {
+            top: 50px;
+            right: 0px;
+        }
+
+        60% {
+            top: 50px;
+            right: 1000px;
+        }
+
+        90% {
+            top: 0px;
+            right: 1000px;
+        }
+
+        100% {
+            top: 0px;
+            right: 0px;
+        }
+    }
+
+    
+    .im{
+        width: 150px;
+        height: 150px;
+        padding: 20px 20px;
+     float: right;
+       transition-property: background-color;
+     transition: all 2s ease-in-out .3s;
+        border-radius: 25px;
+        position: relative;
+        animation: prat 8s ease-in 2s 10 backwards;
+
+    }
+        .box{
+            height: 400px;
+            width: 80%;
+            background-color: rgb(248, 240, 197);
+         position: relative;
+         top: 250px;
+         left: 125px;
+         border-radius: 30px;
+         border: black;
+         border-style: dashed;
+         box-shadow: 8px 8px rgb(44, 40, 34);
+        }
+        #text{
+            padding: 18px 18px;
+            position: relative;
+            top: 25px;
+            left: 15px;
+            text-shadow: 1px 1px rgb(202, 142, 51) ;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            float: left;
+        }
+    #te{
+        padding: 18px 18px;
+            position: relative;
+            top: 25px;
+            left: 15px;
+            text-shadow: 1px 1px rgb(202, 142, 51) ;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            float: right;
+    }
+    #txt{
+            padding: 18px 18px;
+            position: relative;
+            top: 25px;
+            left: 15px;
+            text-shadow: 1px 1px rgb(202, 142, 51) ;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            float: left;
+    }
+.he{
+    position: relative;
+    top: 225px;
+    left: 45%;
+    margin: 5px 5px;
+    border: 5px 5px;
+    padding: 5px 5px;
+    width: 160px;
+    box-shadow: 4px 4px rgb(150, 148, 148);
+    border-radius: 10px;
+    background-color: rgb(161, 209, 30);
+}
+.he:hover{
+    color: black;
+    background-color: rgb(182, 235, 38) ;
+}
+#bou{
+    width: 200px;
+    height: 70px;
+    float: right;
+    position: relative;
+    right: 50px;
+    top: 15px;
+    border-radius: 10px;
+}
+#bak{
+    width: 200px;
+    height: 70px;
+    float: left;
+    position: relative;
+    left: 50px;
+    top: 15px;
+border-radius: 10px;
+}
+.ba:hover{
+    width: 300px;
+    height: 120px;
+    opacity: 80%;
+transform: scale(1.5);
+}
+</style>
+
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="list"><a href="advertisement.html">Home</a></li>
+                <li class="list"><a href="products.html">About Us</a></li>
+                <li class="list"><a href="contactus.html">Contact Us</a></li>
+                
+            </ul>
+
+
+        </nav>
+    </header>
+    <img src="IMAGE.jpg" class="im">
+<h2 class="he">Ta Boulangerie</h2>
+    <div class="box">
+       <span class="text" id="text"> Our Bakery is not only famous in our locality but in whole city and is one of the oldest bakery in the city. It's old , so it doesn't mean that it would be old-fashioned , right? </span>
+       <img src="boulan.jfif" id="bou" class="ba">
+       <span class="text" id="te"> So, we present you the all new "Ta Boulangerie" . The inauaguration of our renewed bakery would be on 5th of December. In keeping mind the current condition of Pandemic , we've come up with idea of giving our family a small gift. </span>
+       <img src="bakery.jpg" id="bak" class="ba">
+       <span class="text" id="txt">Flat 50% Off on all the products of our bakery for D-Day only but their are only limited orders so kindly fill the form in "About Us" Section of this page. Also please keep in mind that one family books with one account only so that maximum number of people can get advantage from this offer.
+  <a href="products.html">Click Here</a> to fill the form
+</span>
+    </div>
+</body>
+
+</html>
